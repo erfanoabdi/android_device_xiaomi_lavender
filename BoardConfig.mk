@@ -68,7 +68,7 @@ BOARD_RAMDISK_OFFSET     := 0x01000000
 ifeq ($(FOX_BUILD_FULL_KERNEL_SOURCES),1)
   TARGET_KERNEL_SOURCE := kernel/xiaomi/lavender
   BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-  TARGET_KERNEL_CONFIG := lavender-fox-aosp-pie_defconfig
+  TARGET_KERNEL_CONFIG := lavender-fox-sdm10_defconfig
 else
   TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
 PRODUCT_COPY_FILES += \
@@ -102,7 +102,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 AB_OTA_UPDATER := false
-LZMA_RAMDISK_TARGETS := recovery
 
 # TWRP specific build flags
 TARGET_OTA_ASSERT_DEVICE := lavender
