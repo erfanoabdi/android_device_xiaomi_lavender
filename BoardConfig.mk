@@ -117,6 +117,7 @@ TW_H_OFFSET := -80
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
+PLATFORM_VERSION := 16.1.0
 
 # exFAT FS Support
 TW_INCLUDE_FUSE_EXFAT := true
