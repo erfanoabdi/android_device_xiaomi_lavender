@@ -2,6 +2,7 @@
 # Copyright 2017 The Android Open Source Project
 #
 # Copyright (C) 2019-2020 OrangeFox Recovery Project
+# Copyright (C) 2020 TWRP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -63,15 +64,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 
-ifeq ($(FOX_BUILD_FULL_KERNEL_SOURCES),1)
-  TARGET_KERNEL_SOURCE := kernel/xiaomi/lavender
-  BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-  TARGET_KERNEL_CONFIG := lavender-fox-sdm10_defconfig
-else
-  TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
-PRODUCT_COPY_FILES += \
-    $(TARGET_PREBUILT_KERNEL):kernel
-endif
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
 
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
 
@@ -133,4 +126,3 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 # Android Verified Boot
 BOARD_AVB_ENABLE := false
 BOARD_BUILD_DISABLED_VBMETAIMAGE := true
-#
