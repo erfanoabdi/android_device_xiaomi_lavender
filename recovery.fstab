@@ -16,8 +16,6 @@
 /vendor_image  emmc    	/dev/block/bootdevice/by-name/vendor			flags=display="Vendor_image";backup=1;flashimg=1
 /system_image  emmc    	/dev/block/bootdevice/by-name/system			flags=display="System_image";backup=1;flashimg=1
 
-/storage       ext4   	/data/media/0                  		     		flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
-
 /dtbo          emmc     /dev/block/bootdevice/by-name/dtbo                      flags=display="dtbo";backup=1;flashimg=1
 /firmware       vfat    /dev/block/bootdevice/by-name/modem                   	flags=display="Firmware";mounttodecrypt;fsflags=ro
 /firmware_image   emmc  /dev/block/bootdevice/by-name/modem        		flags=display="Firmware_image";flashimg=1;backup=0
